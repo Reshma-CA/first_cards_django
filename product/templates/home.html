@@ -1,0 +1,50 @@
+{% extends 'theme.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   {% block content %}
+
+   <h2> Product Details </h2>
+   
+   <div class ="container">
+      <div class = "row">
+
+  
+
+   {% for i in product %}
+   <div class ="col-md-3"> 
+
+      <div class="card" >
+         <img class="card-img-top" src="{{i.image}}" alt="Card image cap">
+         <div class="card-body">
+           <h5 class="card-title">{{i.name}}</h5>
+           <p class="card-text">${{i.price}}</p>
+           <a href="#" class="btn btn-primary">Click</a>
+         </div>
+       </div>
+
+   </div>
+
+
+   {% endfor %}
+   <div>
+
+</div>
+
+  
+
+
+
+
+   {% endblock %}
+
+
+</body>
+</html>
